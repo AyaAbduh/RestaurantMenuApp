@@ -7,7 +7,6 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "menu_items")
 data class MenuItem(
     @PrimaryKey val id: Int,
-    var category: String = "",
     val name: String,
     val description: String,
     val price: Double,
@@ -15,5 +14,6 @@ data class MenuItem(
     val rating: Float,
     val vegan: Boolean,
     val hot: Boolean,
-    val available: Boolean
-)
+    val available: Boolean,
+    var category: String = ""
+    )
